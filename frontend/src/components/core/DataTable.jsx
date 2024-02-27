@@ -37,7 +37,7 @@ const Table = () => {
   const deleteHandler = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete("http://localhost:8001/api/student/deleteStudent", {
+      await axios.delete("https://student-dashboard-backend-eta.vercel.app/deleteStudent", {
         data: { rollNumber: rollNumber },
       });
       toast.success("Student Profile Deleted Succesfully");

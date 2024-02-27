@@ -11,7 +11,7 @@ const NotifyTable = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8001/api/student/notify"
+        "https://student-dashboard-backend-eta.vercel.app/notify"
       );
       setData(response.data.students);
       setFilteredData(response.data.students);
