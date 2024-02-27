@@ -24,7 +24,7 @@ const Table = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://student-dashboard-backend-eta.vercel.app/getAllStudents"
+        "https://student-dashboard-backend-eta.vercel.app/api/student/getAllStudents"
       );
       setData(response.data.students);
       setFilteredData(response.data.students);
@@ -37,7 +37,7 @@ const Table = () => {
   const deleteHandler = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete("https://student-dashboard-backend-eta.vercel.app/deleteStudent", {
+      await axios.delete("https://student-dashboard-backend-eta.vercel.app/api/student/deleteStudent", {
         data: { rollNumber: rollNumber },
       });
       toast.success("Student Profile Deleted Succesfully");

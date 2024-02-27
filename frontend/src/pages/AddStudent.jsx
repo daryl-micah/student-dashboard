@@ -67,7 +67,7 @@ const AddStudent = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://student-dashboard-backend-eta.vercel.app/addStudent",
+        "https://student-dashboard-backend-eta.vercel.app/api/student/addStudent",
         formData
       );
       toast.success("Student record added successfully");

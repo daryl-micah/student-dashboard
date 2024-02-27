@@ -67,7 +67,7 @@ const EditStudent = () => {
     e.preventDefault();
 
     try {
-      await axios.put("https://student-dashboard-backend-eta.vercel.app/updateStudent", {
+      await axios.put("https://student-dashboard-backend-eta.vercel.app/api/student/updateStudent", {
         rollNumber: formData.rollNumber,
         student: formData,
       });
