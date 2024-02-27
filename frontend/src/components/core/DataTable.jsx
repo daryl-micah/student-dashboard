@@ -24,7 +24,7 @@ const Table = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8001/api/student/getAllStudents"
+        "https://student-dashboard-backend-eta.vercel.app/getAllStudents"
       );
       setData(response.data.students);
       setFilteredData(response.data.students);
